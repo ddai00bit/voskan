@@ -6,6 +6,6 @@ Voskan was a product of a web design company i created - Paradox. Voskan was use
 
 # See it in action
 
-[Check Voskan liv](https://www.muneebtatar.com/portfolio/projects/voskan/layouts/Example%201/)
+[Check Voskan live](https://www.muneebtatar.com/portfolio/projects/voskan/layouts/Example%201/)
 
 Voskan was named after Yervant Voskan, He was a Ottoman painter, sculptor, instructor, and administrator of Armenian descent.He is considered the first sculptor of Turkey.
