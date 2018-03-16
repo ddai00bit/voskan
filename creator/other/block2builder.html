@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<script>
+		var blockPage = false;
+	</script>
+	
+	<meta charset="utf-8">
+	
+	<title>Voskan Creator</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../source-files/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="../source-files/css/animate.css">
+	
+	<link rel="stylesheet" href="../source-files/css/vex.css">
+
+	<link rel="stylesheet" href="../source-files/css/vex-theme-default.css">
+
+	<link rel="stylesheet" href="../source-files/css/main.css">
+	
+	<script src="../source-files/js/jquery.min.js"></script>
+	
+	<script src="../source-files/js/vex.combined.min.js"></script>
+
+	<script src="../source-files/js/magnify.js"></script>
+	
+	<script src="../source-files/js/jquery.nicescroll.min.js"></script>
+	
+	<script src="../source-files/js/main.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="nav-bottom">
+		<a href="../index.html">
+			<div class="logo logo-inverse"><h1>C</h1></div>
+		</a>
+	</header>
+	
+	<div class="secondary-header">
+		<h3 class="text-center">Block 2 magnification builder</h3>
+	</div>
+	
+	<br>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1 col-md-offset-5" id="fileUpload">
+				<input type="file" onchange="previewFile()" class="custom-file-input"><br>
+			</div>
+			
+			<div class="col-md-12" id="columnChange" style="display: none;">
+				<form>
+					<input type="text" id="columnn" placeholder="Bootstrap column" value="col-md-8 col-md-offset-2" style="width: 255px; display: block; margin: 0 auto; margin-bottom: 10px;">
+					<input type="button" value="Update column" onclick="updateColumn();" style="text-align: center; margin: 0 auto; display: block; margin-bototm: 10px;">
+				</form>
+				<br>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" id="column">
+				<div class="magnify">
+					<div class='browser-window'>
+						<div class='top-bar'>
+							<div class='circles'>
+								<div class="circle circle-red"></div>
+								<div class="circle circle-yellow"></div>
+								<div class="circle circle-green"></div>
+							</div>
+						</div>
+						<div class='content'>
+							<div class="magnified" id="mag"></div>
+							<img src="" id="browserImg" class="small" style="display: none;">
+							
+							<h1 class="text-grey" style="text-align: center; margin-top: 190px; margin-bottom: 190px;">Upload an image</h1>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br><br><br>
+	</div>
+	
+	<script>
+	
+	vex.defaultOptions.className = 'vex-theme-default';
+	vex.defaultOptions.showCloseButton = false;
+	
+	function previewFile() {
+		var preview = document.getElementById('browserImg');
+		var file    = document.querySelector('input[type=file]').files[0];
+		var reader  = new FileReader();
+
+		reader.addEventListener("load", function () {
+			preview.src = reader.result;
+			document.getElementById("mag").style.setProperty("background-image", "url('" + reader.result + "')");
+			document.getElementById("mag").style.setProperty("background-repeat", "no-repeat");
+		}, false);
+	
+		if (file) {
+			reader.readAsDataURL(file);
+		}	
+		document.getElementsByClassName("text-grey")[0].setAttribute("style", "display: none");
+		document.getElementById("browserImg").removeAttribute("style");
+		document.getElementById("fileUpload").style.setProperty("display", "none");
+		document.getElementById("columnChange").style.setProperty("display", "block");
+	}
+	
+	
+	function updateColumn(value){
+		var columnn = document.getElementById("columnn").value;
+		document.getElementById("column").setAttribute("class", columnn);	
+	}
+	
+	document.getElementById("mag").addEventListener("click", function(){
+		get_position = false;
+		vex.dialog.open({
+		message: 'The code',
+		input: '<p d="magStyleVal"><code>' + style +'</code></p> <br> <p style="font-family: Montserrat; font-size: 17px;">Copy the above code and put it inside the <code>style</code> attribute of your <code>.magnified</code> div.</p>',
+		  buttons: [{
+			type: 'Ok',
+			text: 'YES',
+			className: 'button button-vex'
+		}]
+		});
+	});
+	</script>
+</body>

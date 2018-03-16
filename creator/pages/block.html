@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<script>
+		var page = "block";
+	</script>
+	
+	<meta charset="utf-8">
+	
+	<title>Voskan Creator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../source-files/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="../source-files/css/animate.css">
+
+	<link rel="stylesheet" href="../source-files/css/main.css">
+		
+	<script src="../source-files/js/jquery.min.js"></script>
+	
+	<script src="../source-files/js/jquery.elastic.source.js"></script>
+
+	<script src="../source-files/js/jquery.nicescroll.min.js"></script>
+	
+	<script src="../source-files/js/main.js"></script>
+	
+	<script src="../source-files/json/list.json"></script>
+	
+	<script src="../source-files/json/dependencies.json"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="nav-bottom">
+		<a href="../index.html">
+			<div class="logo logo-inverse"><h1>C</h1></div>
+		</a>
+	</header>	
+	
+
+	<div class="secondary-header">
+		<h3 class="text-center blck-name"></h3>
+	</div>
+	
+	<div class="container">
+		<img src="" id="display" class="img-thumbnail img-center">
+		
+		<br>
+		<br>
+		<br>
+		
+		<div class="row">
+		
+			<div class="col-md-8">
+				<legend>Description</legend>
+				<p id="desc"></p>
+			</div>
+    
+			<div class="col-md-4" style="float: right">
+			
+				<legend>Other info</legend>
+				<ul>
+					<li id="blockname"></li>
+					<li id="blockid"></li>
+					<li id="variantid" style="display: none"></li>
+					<li id="creatorid"></li>
+					<li id="type"></li>	
+				</ul>
+				
+				<div id="showDependenciesList" style="display: none;">
+					<legend style="margin-top: 10px;">Dependencies</legend>
+					<ul id="dependenciesList">
+					
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<br>
+		
+			<div class="othervar" style="display: none">
+				<legend>Other variants</legend>
+					
+				<div class="row othervar">
+				
+				</div>
+			</div>
+				
+			<br>
+				
+			<legend>Customization notes</legend>
+		
+			<h1 class="text-center text-grey no-cn" style="display: none;">This block has no Customization notes.</h1>
+			
+			<ul id="cn">
+			
+			</ul>
+			
+			<br>
+			<legend>Code</legend>
+			
+			<div class="btn-theme copy" >Copy code</div>		
+			
+			<textarea class="form-control" id="main-code-copy" style="display: none;" readonly></textarea>
+			
+			<div id="main-code">
+				<br><br>
+				<img src="../source-files/img/icons/loading.gif" class="img-center">
+				
+			</div>
+		
+			<br>
+		
+			<legend>Customization classes</legend>
+		
+			<h1 class="text-center text-grey no-cc" style="display: none;">This block has no Customization classes.</h1>
+		
+			<div class="row">
+			
+				<div class="col-md-3">
+					<div id="classes">
+					
+					</div>
+				</div>
+				
+				<div class="col-md-9">
+					<div id="cc-code">
+						<h1 class="text-center text-grey cc-sel">Select a Customization class to view its code and description</h1>
+					</div>
+				</div>
+
+			</div>
+		
+		
+	</div>
+	
+	<script>
+		$(document).on ("click", ".copy", function (e) {
+			
+			if($(e.target).hasClass("copy-cc-code")){
+				var ccId = $(e.target).attr("id"),
+					ccId = ccId.match(/[0-9]+/g),
+					ccId = ccId.toString();
+					
+					$("#cc-code-" + ccId + " > textarea").css("display", "inline-block");
+					$("#cc-code-" + ccId + " > textarea").val($("#cc-code-" + ccId + " > .code > div > table > tbody > tr > td:nth-child(2)").text());
+					$("#cc-code-" + ccId + " > textarea").elastic();
+					$("#cc-code-" + ccId + " > textarea").focus();
+					$("#cc-code-" + ccId + " > textarea").select();
+					
+					var copyOffset = $("#cc-code-" + ccId + " > textarea").offset(),
+					destination = copyOffset.top;
+					$(document).scrollTop(destination);
+	
+			}else{
+				$("#main-code-copy").css("display", "inline-block");
+				$("#main-code-copy").val($("#main-code > div > table > tbody > tr > td:nth-child(2)").text());
+				$("#main-code-copy").elastic();
+				$("#main-code-copy").focus();
+				$("#main-code-copy").select();
+			
+				var copyOffset = $('#main-code-copy').offset(),
+				destination = copyOffset.top;
+				$(document).scrollTop(destination);
+			}
+		
+			
+		});
+
+
+	</script>
+</body>

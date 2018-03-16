@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<script>
+		var page = false;
+	</script>
+	<meta charset="utf-8">
+	
+	<title>Voskan Creator</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../source-files/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="../../source-files/css/animate.css">
+	
+	<link rel="stylesheet" href="../../source-files/css/vex.css">
+
+	<link rel="stylesheet" href="../../source-files/css/vex-theme-default.css">
+
+	<link rel="stylesheet" href="../../source-files/css/main.css">
+	
+	<link rel="stylesheet" href="../../source-files/css/spectrum.css">
+	
+	<script src="../../source-files/js/jquery.min.js"></script>
+	
+	<script src="../../source-files/js/vex.combined.min.js"></script>
+
+	<script src="../../source-files/js/magnify.js"></script>
+
+	<script src="../../source-files/js/jquery.nicescroll.min.js"></script>
+	
+	<script src="../../source-files/js/main.js"></script>
+
+	<script src="../../source-files/js/jquery.elastic.source.js"></script>
+
+	<script src="../../source-files/js/spectrum.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<header class="nav-bottom">
+		<a href="../../index.html">
+			<div class="logo logo-inverse"><h1>C</h1></div>
+		</a>
+	</header>
+	
+	<div class="secondary-header">
+		<h3 class="text-center">Pattern customizer</h3>
+	</div>
+	
+	<br>
+	
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-md-1 col-md-offset-5" id="fileUpload">
+				<input type="file" onchange="previewFile()" class="custom-file-input upload-pattern"><br>
+			</div>
+		</div>
+		
+		<div class="row" id="settings" style="display: none;">
+			<div class="col-md-9">
+					<div id="block-8" class="block-8" style="display: none;">	
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>				
+			</div>
+			
+			<div class="col-md-3">
+				<h3 class="mtzero">Select a color</h3>
+				<form>
+					<input type="text" id="color">
+				</form>
+				
+				<h3>Change opacity</h3>
+				<form>
+					<input type="number" min="0" max="1" step="0.1" value="0.8" id="opacity" onchange="changeOpacity();">
+					<input type="button" value="Generate code" id="generate" style="display: block; margin-top: 20px;">
+				</form>
+			</div>
+		
+		</div>
+		
+		<br>
+		
+		<legend class="codeHeading" style="display: none;">Code</legend>
+		
+		<textarea id="code" style="display: none;" class="form-control"></textarea>
+		
+		<textarea id="bg" style="display: none;" class="form-control"></textarea>
+
+		<br>
+	
+		<h1 class="text-grey text-center">Upload a pattern to customize it.</h1>
+
+	</div>
+	
+	<script>
+	firsttime = true;
+	$("#bg").val(' pattern-color="#506271"');
+	
+	var bgCSS, opacityCSS = ' pattern-opacity="0.8"';
+	
+	$("#generate").click(function(){
+		if(firsttime == true){
+			firsttime = false;
+		}else{
+			$("#code").val("");
+		}
+		$("#code").css("display", "block");
+		$(".codeHeading").css("display", "block");
+		valbg = $("#bg").val();
+		
+		$("#code").val(valbg + opacityCSS);
+		$("#code").elastic();
+		$("#code").focus();
+		$("#code").select();
+	});
+	
+	$("#color").spectrum({
+		color: "#506271",
+		move: function(color){
+			bgcolor = "background-color:" + color.toHexString() + ";";
+			$('head').append('<style>.block-8{' + bgcolor + '}</style>');
+			 $("#bg").val('pattern-color="' + color.toHexString() + '"');
+		}
+	});
+	
+	function changeOpacity(){
+		opacity = document.getElementById("opacity").value;
+		opacityProperty = "opacity: " + opacity + ";"
+		$('head').append('<style>.block-8:after{' + opacityProperty + '}</style>');
+		opacityCSS = ' pattern-opacity="' + opacity + '"';
+	}
+	
+	function previewFile(){
+		var preview = document.getElementById('browserImg');
+		var file    = document.querySelector('input[type=file]').files[0];
+		var reader  = new FileReader();
+
+		reader.addEventListener("load", function () {
+			bgProperty = "background-image: url('" + reader.result + "');";
+			$('head').append('<style>.block-8:after{' + bgProperty + '}</style>');
+		}, false);
+	
+		if(file){
+			reader.readAsDataURL(file);
+		}
+		
+		document.getElementsByClassName("text-grey")[0].setAttribute("style", "display: none");
+		
+		
+		document.getElementById("settings").style.setProperty("display", "block");
+		document.getElementById("block-8").style.setProperty("display", "block");
+		
+	}
+	
+	
+	function changeColor(){
+		console.log(document.getElementById("color").value);
+	}
+	
+
+	</script>
+</body>

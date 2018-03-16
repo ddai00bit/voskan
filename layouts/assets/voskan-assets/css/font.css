@@ -1,0 +1,57 @@
+/*
+	Include fonts from Google fonts at the top
+*/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700|Montserrat);
+
+
+li, p, input, .btn-theme,
+.block-2 h1,
+.block-9 input[type="text"], 
+.block-9 input[type="email"], 
+.block-9 textarea, 
+.block-9-style-2 input[type="text"], 
+.block-9-style-2 input[type="email"], 
+.block-9-style-2 textarea,
+.modal.video-modal > .modal-dialog > .modal-content > .modal-header > .close,
+.primary-font
+{
+	/* Change the primary font below */
+	font-family: 'Source Sans Pro', Arial;
+}
+
+h1, h2, h3, h4, h5, h6, legend,
+#headerwrap.header-style-1 h1,
+#headerwrap.header-style-2 h1, 
+#headerwrap.header-style-3 h1, 
+#headerwrap.header-style-4 h1,
+#headerwrap.header-style-5 h1,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand,
+.navbar-style-3 h1.logo a,
+.navbar-style-3 a,
+.navbar-style-4-overlay ul li ,
+.footer-bg-black, 
+.footer-bg-grey, 
+.footer-bg-transparent, 
+.footer-bg-pattern,
+.footer-bg-black  li, 
+.footer-bg-grey li, 
+.footer-bg-transparent li, 
+.footer-bg-pattern li,
+.block-32 h5,
+.block-33 h1,
+.block-33 .btn,
+.btn-style-1,
+.btn-style-2,
+.block-11-style-1 h1,
+.block-17 h1:nth-of-type(1),
+.block-17 h1:nth-of-type(2),
+.block-17 .btn,
+.block-17-style-1 .block-14 h2,
+.block-17-style-1 .block-14 p,
+.secondary-font
+{
+	/* Change the secondary font below */
+	font-family: 'Montserrat', Arial;
+}
+

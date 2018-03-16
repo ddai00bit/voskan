@@ -1,0 +1,1281 @@
+getList({
+	"1" : [
+		{
+			"id": "1",
+			
+			"blockid": "1", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": true,
+			
+			"type": "content",
+			
+			"description": "Display a preview of your product with other information while pointing at the preview of the product to show where each feature is.",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": "10"}],
+			
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "To set the width of the line you have to change the value of the lwidth attributes of the line div (on line <b>6</b>, <b>14</b> and <b>22</b>)."}]
+
+		},
+		[
+			{
+				"name": "line-color-change",
+				
+				"id": "1",
+			
+				"description": "This class has to be used on the <code>.line</code> div when changing the color of the line which points to a specific feature on the product preview."
+			},
+			{
+				"name": "margin-change",
+				
+				"id": "2",
+			
+				"description": "This class has to be used on the <code>.feature</code> div when it is not point correctly to where the feature is on the product preview."
+			},
+			{
+				"name": "block-1-frame-hide",
+				
+				"id": "3",
+				
+				"description": "This class hides the product preview on smaller devices."
+			}
+		]
+	],
+	
+	"2" : [
+		{
+			"id": "2",
+		
+			"blockid": "2", 
+		
+			"isvariant": true,
+		
+			"variantid": "1",
+		
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "You can create the magnification effect using the <a href='../other/block2builder.html'>block 2 magnification builder</a>"}],
+		
+			"hascustomisationclasses": false,
+		
+			"type": "content",
+		
+			"description": "Display a preview of your product while magnifying certain part of the preview and showcase information about a certain feature of your product.",
+						
+			"hasdependency": true,			
+		
+			"dependencies": [{"id": 1}, {"id": 2}]
+		}
+	],
+	
+	"3" : [
+		{
+			"id": "3",
+		
+			"blockid": "2", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "2",
+			
+			"parentid": "2",
+			
+			"useparentdes": true,
+			
+			"hascustomisationnotes": true,
+			
+			"hascustomisationclasses": false,
+			
+			"useparentcustomisationclasses": true,
+			
+			"useparentcustomisationnotes": true,
+			
+			"hasdependency": true,			
+		
+			"dependencies": [{"id": 1}, {"id": 2}]
+		}
+	],
+	
+	"4" : [
+		{
+			"id": "4",
+		
+			"blockid": "2", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "3",
+			
+			"parentid": "2",
+			
+			"useparentdes": true,
+			
+			"hascustomisationnotes": true,
+			
+			"hascustomisationclasses": false,
+			
+			"useparentcustomisationclasses": true,
+			
+			"useparentcustomisationnotes": true,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": 2}, {"id": 5}]
+
+		}
+	],
+	
+	"5" : [
+		{
+			"id": "5",
+		
+			"blockid": "3", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "1",
+									
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "The responsive macbook mockup (on line 23) and the imac mockup (on line 45) can be used outside this block using the <code>block-3-macbook</code> class as well as the <code>block-3-imac</code> class for the imac mockup. These mockups are part of the minimal devices component by <a href='https://twitter.com/jaredhardy'>jaredhardy</a>"}],
+			
+			"hascustomisationclasses": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 4}],
+			
+			"description": "Display a preview of your product while magnifying certain part of the preview and showcase information about a certain feature of your product."	
+			
+		}
+	],
+
+	"6" : [
+		{
+			"id": "6",
+		
+			"blockid": "3", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "2",
+			
+			"parentid": "5",
+			
+			"useparentdes": true,
+			
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "The responsive macbook mockup (on line 23) and the imac mockup (on line 49) can be used outside this block using the <code>block-3-macbook</code> class as well as the <code>block-3-imac</code> class for the imac mockup. These mockups are part of the minimal devices component by <a href='https://twitter.com/jaredhardy'>jaredhardy</a>"}],
+			
+			"hascustomisationclasses": false,
+			
+			"useparentcustomisationclasses": false,
+			
+			"useparentcustomisationnotes": false,	
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}, {"id": 4}]
+			
+		}
+	],
+	
+	"7" : [
+		{
+			"id": "7",
+			
+			"blockid": "4", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}],
+			
+			"description": "Showcase features about your product with icons. When a specific feature is hovered, it flips to display more information"
+			
+		}
+	],
+	
+	"8" : [
+		{
+			"id": "8",
+		
+			"blockid": "5", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "1",
+									
+			"hascustomisationnotes": false,
+						
+			"hascustomisationclasses": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 5}],
+			
+			"description": "Showcase testimonials from customers who say good stuff about your product."	
+			
+		}
+	],
+
+	"9" : [
+		{
+			"id": "9",
+		
+			"blockid": "5", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "2",
+			
+			"parentid": "8",
+			
+			"useparentdes": true,
+			
+			"hascustomisationnotes": false,
+									
+			"hascustomisationclasses": false,
+			
+			"useparentcustomisationclasses": false,
+			
+			"useparentcustomisationnotes": false,
+			
+			"hasdependency": false
+		}
+	],
+	
+	"10" : [
+		{
+			"id": "10",
+		
+			"blockid": "6", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "1",
+									
+			"hascustomisationnotes": false,
+						
+			"hascustomisationclasses": false,
+			
+			"description": "Showcase information about your mobile application.",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 4}]
+
+			
+			
+		}
+	],
+
+	"11" : [
+		{
+			"id": "11",
+		
+			"blockid": "6", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "2",
+			
+			"parentid": "10",
+			
+			"useparentdes": false,
+			
+			"description": "Showcase information about your ipad app.",
+			
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "The responsive ipad mockup (on line 3) can be used outside this block using the <code>block-6-ipad</code> class. These mockups are part of the minimal devices component by <a href='https://twitter.com/jaredhardy'>jaredhardy</a>"}],
+						
+			"hascustomisationclasses": false,
+			
+			"useparentcustomisationclasses": false,
+			
+			"useparentcustomisationnotes": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 4}, {"id": 2}]
+
+
+		}
+	],
+	
+	"12": [
+		{
+		"id": "12",
+			
+		"blockid": "8", 
+		
+		"isvariant": false,
+		
+		"hascustomisationnotes": false,
+		
+		"hascustomisationclasses": false,
+		
+		"type": "content",
+		
+		"hasdependency": true,
+			
+		"dependencies": [{"id": 2}],
+		
+		"description": "Add a beautiful pattern background to almost div. You can get patterns from subtlepatterns.com and can even further customise it by changing color and opacity. This block is an important part of voskan. You can watch the video tutorial made to demonstrate it."
+		}
+	],
+	
+	"13" : [
+		{
+			"id": "13",
+		
+			"blockid": "9", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "1",
+									
+			"hascustomisationnotes": false,
+						
+			"hascustomisationclasses": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 3}],
+
+			"description": "Contact form to let your customers get in touch with you."	
+			
+		}
+	],
+
+	"14" : [
+		{
+			"id": "14",
+		
+			"blockid": "9", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "2",
+			
+			"parentid": "13",
+									
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "The image buttons (<code>.img-btn</code>) on line 31, 32 and 33 can be used outside this block."}],
+						
+			"hascustomisationclasses": false,
+						
+			"useparentcustomisationclasses": false,
+			
+			"useparentcustomisationnotes": false,
+			
+			"useparentdes": true,
+		
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 3}]
+
+
+		}
+	],
+
+	"15" : [
+		{
+			"id": "15",
+		
+			"blockid": "9", 
+			
+			"type": "content",
+		
+			"isvariant": true,
+			
+			"variantid": "3",
+			
+			"parentid": "13",
+									
+			"hascustomisationnotes": true,
+			
+			"cn": [{"id": "1", "des": "You can get your embeddable google map (on line 5) <a href='https://developers.google.com/maps/documentation/embed/start'>from here</a>."}],
+						
+			"hascustomisationclasses": false,
+						
+			"useparentcustomisationclasses": false,
+			
+			"useparentcustomisationnotes": false,
+			
+			"useparentdes": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 3}, {"id": 5}],
+			
+			"description": "Let your customers get in touch with you through a form and show your office address through google maps."
+		}
+	],
+	
+	"16" : [
+		{
+			"id": "16",
+			
+			"blockid": "10", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase information and features about your product.",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]
+
+
+			
+		}
+	],
+	
+	"17" : [
+		{
+			"id": "17",
+		
+			"blockid": "11", 
+		
+			"isvariant": true,
+		
+			"variantid": "1",
+		
+			"hascustomisationnotes": true,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 4}, {"id": 6}],
+			
+			"cn": [
+				{
+					"id": "1",
+					
+					"des": "To add your own image you have to edit the inline CSS on line 1 by changing the <code>background-image</code> property value to your own background image url."
+				},
+				{
+					"id": "2",
+					
+					"des": "This block uses the stellar javascript library in order to achieve the parallax effect. You can change the parallax speed using the <code>data-stellar-background-ratio</code> attribute. According to the documentation, the ratio is relative to the natural scroll speed, so a ratio of 0.5 would cause the element to scroll at half-speed, a ratio of 1 would have no effect, and a ratio of 2 would cause the element to scroll at twice the speed."
+				},
+				{
+					"id": "3", 
+					
+					"des": "This block uses the block 3 responsive macbook mockup (from minimal devices). The shows us that we can create many patterns by using blocks inside blocks."
+					
+				},
+				{
+					"id": "4",
+					
+					"des": "If using a parallax background lags your scroll then you should probably resize/compress your background image. I would suggest to use the online <a href='http://www.simpleimageresizer.com'>simple image resizer</a> and resize your image to about 60 or 75 percent (depending on your image size)."
+				}
+			],
+		
+			"hascustomisationclasses": true,
+		
+			"type": "content",
+		
+			"description": "Showcase information about your product with a macbook mockup and elegant parallax background."	
+		},
+		[
+			{
+				"name": "block-11-white-txt",
+				
+				"id": "1",
+			
+				"description": "By default block 11 has black color text. Using this customization class you can change the color to white."
+			}
+		]
+	],
+	
+	"18" : [
+		{
+			"id": "18",
+		
+			"blockid": "11", 
+		
+			"isvariant": true,
+			
+			"parentid": "17",
+		
+			"variantid": "2",
+		
+			"hascustomisationnotes": true,
+						
+			"cn": [
+				{
+					"id": "1",
+					
+					"des": "To add your own image you have to edit the inline CSS on line 1 by changing the <code>background-image</code> property value to your own background image url."
+				},
+				{
+					"id": "2",
+					
+					"des": "This block uses the stellar javascript library in order to achieve the parallax effect. You can change the parallax speed using the <code>data-stellar-background-ratio</code> attribute. According to the documentation, the ratio is relative to the natural scroll speed, so a ratio of 0.5 would cause the element to scroll at half-speed, a ratio of 1 would have no effect, and a ratio of 2 would cause the element to scroll at twice the speed."
+				}
+			],
+		
+			"hascustomisationclasses": true,
+		
+			"type": "content",
+		
+			"description": "Showcase information about your product with a browser mockup and elegant parallax background.",
+			
+			"useparentdes": false,
+			
+			"useparentcustomisationclasses": true,
+			
+			"useparentcustomisationnotes": false,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": 2}, {"id": 6}]
+
+		}
+	],
+	
+	"19" : [
+		{
+			"id": "19",
+			
+			"blockid": "12", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+		
+			"description": "Showcase information and features about your product.",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]
+		}
+	],
+		
+	"20" : [
+		{
+			"id": "20",
+			
+			"blockid": "13", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase information and features about your product.",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 5}]
+		}
+	],
+	
+	"21" : [
+		{
+			"id": "21",
+			
+			"blockid": "14", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase information and features about your product.",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]
+			
+		}
+	],
+	
+	"22" : [
+		{
+			"id": "22",
+			
+			"blockid": "15", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": true,
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}],
+			
+			"type": "content",
+			
+			"description": "Show a step by step guide for your product or show specific features."
+			
+		},
+		[
+			{
+				"name": "no-mobile-preview",
+				
+				"id": "1",
+			
+				"description": "You can use this customization class to hide the right column of a specific feature on smaller screens (width less than 991px)."
+			}
+		]
+	],
+	
+	"23" : [
+		{
+			"id": "23",
+			
+			"blockid": "16", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": true,
+			
+			"type": "content",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": 4}],
+			
+			"description": "A carousel with a elegant pattern background from block 8 or a simple static background."
+			
+		},
+		[
+			{
+				"name": "block-16-bg",
+				
+				"id": "1",
+			
+				"description": "Use this customization class to add a static background. You can link to your background image using inline CSS as done on line 3."
+			},
+			{
+				"name": "block-16-font-white",
+				
+				"id": "2",
+				
+				"description": "Use this customization class to change the font color to white as done on line 3."
+			}
+		]
+	],
+	
+	"24": [
+		{
+		"id": "24",
+			
+		"blockid": "17", 
+			
+		"isvariant": true,
+		
+		"variantid": "1",
+					
+		"hascustomisationnotes": true,
+		
+		"hasdependency": false,
+		
+		"cn": [
+			{
+				"id": "1",
+				
+				"des": "The background color can be changed by using inline CSS on the <code>.block-17</code> div. Such as <code>style='background-color: #620000;'</code>"
+			}
+		],
+		
+		"hascustomisationclasses": false,
+			
+		"type": "content",
+			
+		"description": "This block is built to let your customer purchase your product."
+			
+		}
+	],
+	
+	"25": [
+		{
+		
+		"id": "25",
+			
+		"blockid": "17", 
+			
+		"isvariant": true,
+		
+		"variantid": "2",
+		
+		"parentid": "24",
+					
+		"hascustomisationnotes": true,
+		
+		"useparentcustomisationnotes": false,
+		
+		"hasdependency": false,
+		
+		"cn": [
+			{
+				"id": "1",
+				
+				"des": "To change the background color of block 4, the flipping block used inside this block, so that it resembles the pattern color, you will have to change the front side (line 13) and the back side (line 17) background color as done below."
+			}
+		],
+		
+		"hascustomisationclasses": false,
+		
+		"useparentcustomisationclasses": false,
+			
+		"type": "content",
+					
+		"useparentdes": true
+			
+		}
+	],
+	
+	"26" : [
+		{
+			"id": "26",
+			
+			"blockid": "18", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase features about your product",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]			
+			
+		}
+	],
+	
+	"27" : [
+		{
+			"id": "27",
+			
+			"blockid": "19", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase features about your product",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": 2}]			
+			
+		}
+	],
+	
+	"28" : [
+		{
+			"id": "28",
+			
+			"blockid": "20", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "content",
+			
+			"description": "Showcase information about your product",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}, {"id": 5}]
+			
+		}
+	],
+	
+	"29" : [
+		{
+			"id": "29",
+			
+			"blockid": "21", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "header",
+			
+			"description": "A elegant header to showcase information and preview of your product.",		
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 1}, {"id": 3}]
+		}
+	],
+	
+	"30" : [
+		{
+			"id": "30",
+			
+			"blockid": "22", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": true,
+			
+			"cn": [
+				{
+					"id": "1",
+					
+					"des": "You can embed videos from vimeo and youtube by copying the video embed code into the <code>.embed-video-container</code> div (line 25)"
+				}
+			],
+			
+			"hascustomisationclasses": false,
+			
+			"type": "header",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}],
+			
+			"description": "A elegant header to showcase quick information about your product, a informational intro and a form."			
+			
+		}
+	],
+	
+	"31" : [
+		{
+			"id": "31",
+			
+			"blockid": "23", 
+	
+			"cn": [
+				{
+					"id": "1",
+					
+					"des": "You can embed videos from vimeo and youtube by copying the video embed code into the <code>.embed-video-container</code> div (line 56,71 and 86)"
+				}
+			],
+	
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"hasdependency": false,
+			
+			"type": "header",
+			
+			"description": "A elegant header to showcase information about your product and informational videos."			
+			
+		}
+	],
+	
+	"32" : [
+		{
+			"id": "32",
+			
+			"blockid": "24", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "header",
+			
+			"description": "Showcase your product information and logo.",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]
+			
+		}
+	],
+	
+	"33" : [
+		{
+			"id": "33",
+			
+			"blockid": "25", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "header",
+			
+			"description": "Showcase your product information as carousel.",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}]			
+			
+		}
+	],
+	
+	"34" : [
+		{
+			"id": "34",
+			
+			"blockid": "26", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "navigation",
+			
+			"hasdependency": false,
+			
+			"description": "A simple navigation bar."			
+			
+		}
+	],
+	
+	"35" : [
+		{
+			"id": "35",
+			
+			"blockid": "27", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "navigation",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 2}],
+			
+			"description": "A simple navigation bar."			
+			
+		}
+	],
+	
+	"36" : [
+		{
+			"id": "36",
+			
+			"blockid": "28", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"hasdependency": false,
+			
+			"type": "navigation",
+			
+			"description": "A minimal navigation which slides from the right."			
+			
+		},
+		[
+			{
+				"name": "shadow-drop",
+				
+				"id": "1",
+				
+				"description": "The navigation container drops a shadow to the left side (line 2)"
+			},
+			{
+				"name": "black-background",
+				
+				"id": "2",
+				
+				"description": "The background color of the navigation container changes to black (line 2)"
+			},
+			{
+				"name": "square-border",
+				
+				"id": "3",
+				
+				"description": "Change the navigation toggle border to square (line 17)"
+			},
+			{
+				"name": "circle-border",
+				
+				"id": "4",
+				
+				"description": "Change the navigation toggle border to circle (line 17)"
+			}
+		]
+	],
+	
+	"37" : [
+		{
+			"id": "37",
+			
+			"blockid": "29", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"hasdependency": false,
+			
+			"type": "navigation",
+			
+			"description": "A beautiful navigation which overlays the website content."			
+			
+		}
+	],
+	
+	"38" : [
+		{
+			"id": "38",
+			
+			"blockid": "30", 
+			
+			"hasdependency": false,
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "footer",
+			
+			"description": "A minimal footer to showcase your social accounts and important links"			
+			
+		}
+	],
+	
+	"39" : [
+		{
+			"id": "39",
+			
+			"blockid": "31", 
+			
+			"hasdependency": false,
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "footer",
+			
+			"description": "A minimal footer to showcase your important links a button to go to the top"			
+			
+		}
+	],
+	
+	"40" : [
+		{
+			"id": "40",
+			
+			"blockid": "32", 
+			
+			"hasdependency": false,
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "footer",
+			
+			"description": "A minimal footer to showcase your important links"			
+			
+		}
+	],
+	
+	"41" : [
+		{
+			"id": "41",
+			
+			"blockid": "33", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "footer",
+			
+			"description": "A simple footer to showcase a buy button for your product",
+
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 3}]			
+			
+		}
+	],
+	
+	"42" : [
+		{
+			"id": "42",
+			
+			"blockid": "34", 
+			
+			"isvariant": false,
+			
+			"hascustomisationnotes": false,
+			
+			"hascustomisationclasses": false,
+			
+			"type": "footer",
+			
+			"hasdependency": true,
+			
+			"dependencies": [{"id": 3}, {"id": 4}],
+			
+			"description": "A elegant footer which uses the block 11 as a base block and uses its parallax effect to create a nice user experience."			
+			
+		}
+	],
+	
+	"43" : [
+		{
+			"id": "43",
+		
+			"blockid": "7", 
+		
+			"isvariant": false,
+		
+			"hascustomisationnotes": false,
+					
+			"hascustomisationclasses": false,
+		
+			"type": "content",
+		
+			"description": "Display your team memebers in a elegant and professional way.",
+						
+			"hasdependency": true,			
+		
+			"dependencies": [{"id": 11}]
+		}
+	],
+	
+	"44" : [
+		{
+			"id": "44",
+		
+			"blockid": "35", 
+		
+			"isvariant": true,
+		
+			"variantid": "1",
+		
+			"hascustomisationnotes": false,
+					
+			"hascustomisationclasses": false,
+		
+			"type": "header",
+		
+			"description": "An elegant header",
+						
+			"hasdependency": false			
+		
+		}
+	],
+	
+	"45" : [
+		{
+			"id": "45",
+		
+			"blockid": "35", 
+			
+			"parentid": "44",
+		
+			"isvariant": true,
+		
+			"variantid": "2",
+		
+			"hascustomisationnotes": false,
+					
+			"hascustomisationclasses": false,
+		
+			"type": "header",
+		
+			"useparentdes": true,
+				
+			"hasdependency": true,
+
+			"dependencies": [{"id": 5}, {"id": "1"}]			
+		
+		}
+	]
+})

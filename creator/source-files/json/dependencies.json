@@ -1,0 +1,227 @@
+getDependenciesList({
+	"1": [
+		{
+			"id": "1",
+			
+			"version": "1",
+			
+			"name": "Window frame",
+			
+			"used": "Display your product preview in a browser/window frame.",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"2": [
+		{
+			"id": "2",
+			
+			"version": "1",
+			
+			"name": "Icons",
+			
+			"used": "Say a thousands words through elegant graphical illusatrations.",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"3": [
+		{
+			"id": "3",
+			
+			"version": "1",
+			
+			"name": "Buttons",
+
+			"used": "Voskan provides elegant button styles",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"4": [
+		{
+			"id": "4",
+			
+			"name": "Minimal devices",
+			
+			"version": "0.5.6",
+			
+			"used": "Elegantly show off your product preview in device mockups.",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"5": [
+		{
+			"id": "5",
+			
+			"name": "Helper classes",
+			
+			"version": "1",
+			
+			"used": "CSS classes to help you get (almost any) job done.",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"6": [
+		{
+			"id": "6",
+			
+			"version": "0.6.2",
+			
+			"name": "Stellar",
+			
+			"used": "Create parallax backgrounds and elements.",
+			
+			"hasdocument": true
+		}
+	],
+	
+	"7": [
+		{
+			"id": "7",
+			
+			"version": "2.1.4",
+			
+			"name": "jQuery",
+			
+			"used": "jQuery is a powerful and very popular javascript library.",
+			
+			"hasdocument": false,
+			
+			"url": "https://jquery.com/"
+		}
+	],
+	
+	"8": [
+		{
+			"id": "8",
+			
+			"version": "2.1.4",
+			
+			"name": "Classie",
+			
+			"used": "Classie provides class helper functions",
+			
+			"hasdocument": false,
+			
+			"url": "https://github.com/desandro/classie"
+		}
+	],
+	
+	"9": [
+		{
+			"id": "9",
+			
+			"version": "3.6.0",
+			
+			"name": "Nicescroll",
+			
+			"hasdocument": false,
+			
+			"url": "https://github.com/inuyaksa/jquery.nicescroll",
+			
+			"used": "Nicescroll is a jquery plugin, for nice scrollbars with a very similar ios/mobile style."
+		}
+	],
+	
+	"10": [
+		{
+			"id": "10",
+			
+			"version": "4.0.0",
+			
+			"name": "Waypoints",
+			
+			"hasdocument": false,
+			
+			"url": "http://imakewebthings.com/waypoints/",
+			
+			"used": "Waypoints is the easiest way to trigger a function when you scroll to an element."
+		}
+	],
+	
+	"11": [
+		{
+			"id": "11",
+			
+			"version": "1.0.0",
+			
+			"hasdocument": false,
+			
+			"url": "http://tympanus.net/Development/ScatteredPolaroidsGallery/",
+			
+			"name": "Photostack",
+			
+			"used": "Used to create scattered polaroids gallery with photos scattered randomly."
+		}
+	],
+	
+	"12": [
+		{
+			"id": "12",
+			
+			"version": "1.7.2",
+			
+			"hasdocument": false,
+			
+			"name": "Smoothscroll",
+			
+			"used": "Automatically make same-page links scroll smoothly",
+			
+			"url": "https://github.com/kswedberg/jquery-smooth-scroll"
+		}
+	],
+	
+	"13": [
+		{
+			"id": "13",
+			
+			"version": "3.0.1",
+			
+			"name": "Animate.css",
+			
+			"hasdocument": true,
+			
+			"used": "animate.css contains a thousands css animations for various purposes."
+		}
+	],
+	
+	"14": [
+		{
+			"id": "14",
+			
+			"version": "1",
+			
+			"name": "jQuery mobile detect",
+			
+			"hasdocument": false,
+			
+			"url": "http://detectmobilebrowsers.com/",
+			
+			"used": "Used to detect if a user is on a mobile phone."
+		}
+	],
+	
+	"15": [
+		{
+			"id": "15",
+			
+			"version": "3.1.8",
+			
+			"name": "imagesLoaded",
+			
+			"hasdocument": false,
+			
+			"url": "http://imagesloaded.desandro.com/",
+			
+			"used": "Used to show the preloader before images load."
+		}
+	]
+})
