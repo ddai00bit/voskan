@@ -1,5 +1,5 @@
 # Voskan
-Voskan is a complete block-based web design Voskan is a product theme designed for companies, startups, corporates and people launching their online product.
+Voskan is a complete block-based web design. It is designed for companies, startups, corporates and people launching their online product.
 
 # The history
 Voskan was a product of a web design company i created - Paradox. Voskan was used by small businesses primarly. I closed Paradox to focus on other ventures.
